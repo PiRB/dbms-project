@@ -1,6 +1,26 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  a(class='button is-primary') Back Home
+  div(class='is-flex is-flex-direction-column is-align-items-center m-6')
+    h1(class='is-size-1 has-text-primary')= title
+    p Welcome to my DBMS project for my course of DBMS in MT4 CTO Techlead
+
+
+  table(class='table is-bordered is-striped is-fullwidth')
+    thead
+      tr
+        th ID
+        th Title
+        th Price
+        th Rating
+        th Category
+        th Number of rates
+    tbody
+      each row in rows
+        tr
+          td=row.film_id
+          td=row.title
+          td=row.price
+          td=row.rating
+          td=row.category
+          td=row.nb_rate
